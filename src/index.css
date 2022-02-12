@@ -1,4 +1,27 @@
+@import url('http://fonts.cdnfonts.com/css/sf-pro-display');
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --bg-primary: #292929;
+  --bg-secondary: #131313;
+  --bg-tertiary: #232323;
+  --clr-primary: #fff;
+  --clr-secondary: rgba(255, 255, 255, 0.5);
+}
+
+html {
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  margin: 4.3rem 4.1rem;
+  color: var(--clr-primary);
 }

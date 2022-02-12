@@ -1,0 +1,27 @@
+.filter-container {
+  background-color: var(--bg-secondary);
+  width: 22.8rem;
+  height: 27.5rem;
+  padding: 2.4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+}
+
+.filter-title {
+  font-size: 2rem;
+  color: var(--clr-secondary);
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--clr-secondary);
+  margin-bottom: 3.5rem;
+}
+
+select {
+  background-color: var(--bg-tertiary);
+  color: var(--clr-primary);
+  padding: 0.8rem 1.1rem 0.75rem 1.3rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}

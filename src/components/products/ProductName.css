@@ -1,0 +1,13 @@
+.product-subtitle {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-secondary);
+}
+
+.card-container {
+  background-color: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}

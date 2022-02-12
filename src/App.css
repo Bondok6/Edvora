@@ -1,0 +1,25 @@
+main {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.filter-section {
+  width: 20%;
+}
+
+.products-section {
+  width: 80%;
+}
+
+.title {
+  color: var(--clr-primary);
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  color: var(--clr-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}

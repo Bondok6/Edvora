@@ -23,3 +23,11 @@
 .card-container::-webkit-scrollbar {
   width: 0;
 }
+
+.right-icon {
+  position: relative;
+  float: right;
+  top: -14rem;
+  left: 5rem;
+  cursor: pointer;
+}

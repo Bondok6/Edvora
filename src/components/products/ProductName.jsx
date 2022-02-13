@@ -1,24 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ProductName.css';
 import ProductCard from './ProductCard';
 
-const ProductName = () => {
+const ProductName = ({ products }) => {
   return (
     <section className="product-name-section">
       <h3 className="product-subtitle">Product Name</h3>
       <ul className="card-container">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.length > 0 &&
+          products.map((product) => {
+            return (
+              <ProductCard
+                key={product.time}
+                img={product.image}
+                name={product.product_name}
+                brand={product.brand_name}
+                price={product.price}
+                location={product.address}
+                date={product.date}
+                description={product.discription}
+              />
+            );
+          })}
       </ul>
     </section>
   );
+};
+
+ProductName.propTypes = {
+  products: PropTypes.arrayOf.isRequired,
 };
 
 export default ProductName;

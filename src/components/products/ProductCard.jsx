@@ -12,7 +12,7 @@ const ProductCard = ({
   description,
 }) => {
   return (
-    <li className="card">
+    <div className="card">
       <div className="card-upper">
         <img className="product-img" src={img} alt="" />
         <div className="card-details">
@@ -38,7 +38,7 @@ const ProductCard = ({
         </h5>
         <h5>{description}</h5>
       </div>
-    </li>
+    </div>
   );
 };
 
@@ -47,7 +47,7 @@ ProductCard.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  location: PropTypes.objectOf.isRequired,
   date: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

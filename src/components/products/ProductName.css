@@ -10,24 +10,31 @@
   margin-bottom: 1rem;
 }
 
-.card-container {
+.slider-container {
+  overflow: hidden;
   background-color: var(--bg-secondary);
   border-radius: 1.5rem;
   padding: 2rem;
-  list-style: none;
+}
+
+.slider {
   display: flex;
   gap: 2rem;
-  overflow-x: auto;
 }
 
-.card-container::-webkit-scrollbar {
-  width: 0;
-}
-
-.right-icon {
+.right-icon,
+.left-icon {
   position: relative;
   float: right;
   top: -14rem;
-  left: 5rem;
   cursor: pointer;
+}
+
+.right-icon {
+  left: 5rem;
+}
+
+.left-icon {
+  right: 138rem;
+  transform: rotate(-180deg);
 }

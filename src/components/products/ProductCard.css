@@ -1,6 +1,6 @@
 .card {
-  width: 21rem;
-  height: 15rem;
+  min-width: 21rem;
+  min-height: 15rem;
   background-color: var(--bg-tertiary);
   padding: 1rem;
   border-radius: 0.5rem;

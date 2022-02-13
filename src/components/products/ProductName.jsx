@@ -8,6 +8,14 @@ const ProductName = () => {
       <h3 className="product-subtitle">Product Name</h3>
       <ul className="card-container">
         <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </ul>
     </section>
   );

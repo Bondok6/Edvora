@@ -14,6 +14,7 @@ function App() {
         <h2 className="sub-title">Products</h2>
 
         <ProductName />
+        <ProductName />
       </section>
     </main>
   );

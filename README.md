@@ -7,22 +7,20 @@
 ## Built With
 
 - React.js
-- [React-Bootstrap](https://react-bootstrap.netlify.app/getting-started/introduction/)
 - JavaScript
 - HTML - HTML5
 - CSS - CSS3
 
 ## Additional Used
 
-- Bootstrap
-- ES6 (Modules)
+- Linters
+- Gitflow
 - npm
 - Jest (testing)
-- Linters
 
 ## Live Demo 🌐
 
-### [Math-Magicians Link](https://bondok6.github.io/Edvora/)
+### [Edvora Link](https://bondok6.github.io/Edvora/)
 
 ## Getting Started
 

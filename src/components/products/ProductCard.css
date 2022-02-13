@@ -12,7 +12,7 @@
 }
 
 .product-img {
-  max-width: 70px;
+  max-height: 70px;
   border-radius: 0.5rem;
 }
 
@@ -36,10 +36,11 @@
 }
 
 .card-lower {
-  margin-top: 1.3rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .card-lower h5 {
@@ -49,5 +50,5 @@
 
 .card-lower h5:last-child {
   font-size: 1.1rem;
-  margin-top: 1.3rem;
+  margin-top: 1rem;
 }

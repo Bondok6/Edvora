@@ -1,0 +1,25 @@
+.product-name-section {
+  margin-bottom: 5rem;
+  margin-right: 10rem;
+}
+
+.product-subtitle {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-secondary);
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  background-color: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 0;
+}

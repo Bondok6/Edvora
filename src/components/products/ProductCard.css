@@ -1,0 +1,53 @@
+.card {
+  min-width: 21rem;
+  min-height: 15rem;
+  background-color: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-upper {
+  display: flex;
+  gap: 2rem;
+}
+
+.product-img {
+  max-width: 70px;
+  border-radius: 0.5rem;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-name {
+  font-size: 1.5rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  color: var(--clr-secondary);
+}
+
+.price {
+  font-size: 1.3rem;
+}
+
+.card-lower {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-lower h5 {
+  font-size: 1.3rem;
+  color: var(--clr-secondary);
+}
+
+.card-lower h5:last-child {
+  font-size: 1.1rem;
+  margin-top: 1.3rem;
+}

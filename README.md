@@ -4,8 +4,6 @@
 
 <img src="https://user-images.githubusercontent.com/45231276/153813196-be7fc34b-cedd-4786-b474-c21b2e6ac762.PNG" width="30%" /><img src="https://user-images.githubusercontent.com/45231276/153813238-19e3d912-a07b-4efd-9a02-5bb1aa84e374.PNG" width="70%" />
 
-
-
 ## Built With
 
 - React.js
@@ -28,9 +26,9 @@
 
 To get a local copy up and running follow these simple example steps.
 
-`git clone git@github.com:Bondok6/math-magicians.git`
+`git clone git@github.com:Bondok6/Edvora.git`
 
-Then `cd math-magicians`
+Then `cd Edvora`
 
 Then `npm install` to install packages
 

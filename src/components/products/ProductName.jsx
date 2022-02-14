@@ -51,17 +51,19 @@ const ProductName = ({ products = [], brand }) => {
         <div className="slider" ref={slider}>
           {
             /* prettier-ignore */
-            items.length > 0 && items.map((product) => (
-            <ProductCard
-              key={product.time}
-              img={product.image}
-              name={product.product_name}
-              brand={product.brand_name}
-              price={product.price}
-              location={product.address}
-              date={product.date}
-              description={product.discription}
-              />))
+            items.length > 0
+            && items.map((product) => (
+              <ProductCard
+                key={product.time}
+                img={product.image}
+                name={product.product_name}
+                brand={product.brand_name}
+                price={product.price}
+                location={product.address}
+                date={product.date}
+                description={product.discription}
+              />
+            ))
           }
         </div>
       </div>

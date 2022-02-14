@@ -15,10 +15,11 @@ const Products = ({ products = [] }) => {
 
   return (
     <>
-      {products.length > 0 &&
-        productName.map((brand) => {
-          return <ProductName key={brand} brand={brand} products={products} />;
-        })}
+      {
+        /* prettier-ignore */
+        products.length > 0
+        && productName.map((brand) => <ProductName key={brand} brand={brand} products={products} />)
+      }
     </>
   );
 };

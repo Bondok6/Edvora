@@ -13,6 +13,7 @@ function App() {
     if (data.length > 0) {
       const productDataFilter = data.filter((product) => {
         if (productFilter !== '') return product.brand_name === productFilter;
+        return product;
       });
       setData(productDataFilter);
     }

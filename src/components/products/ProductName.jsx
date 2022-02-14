@@ -15,10 +15,7 @@ const ProductName = ({ products = [], brand }) => {
 
   useEffect(() => {
     if (products.length > 0) {
-      const data = products.filter((product) => {
-        if (product.brand_name === brand) return product;
-        return products;
-      });
+      const data = products.filter((product) => product.brand_name === brand);
       setItems(data);
     }
   }, [products, brand]);

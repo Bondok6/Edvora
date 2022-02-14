@@ -4,13 +4,24 @@ import './ProductName.css';
 import ProductCard from './ProductCard';
 import rightArrow from '../imgs/right-arrow.svg';
 
-const ProductName = ({ products }) => {
+const ProductName = ({ products = [], brand }) => {
+  const [items, setItems] = useState([]);
   const slider = useRef();
   const rightIcon = useRef();
   const leftIcon = useRef();
 
   const [counter, setCounter] = useState(1);
   const size = 235;
+
+  useEffect(() => {
+    if (products.length > 0) {
+      const data = products.filter((product) => {
+        if (product.brand_name === brand) return product;
+        return products;
+      });
+      setItems(data);
+    }
+  }, [products, brand]);
 
   useEffect(() => {
     slider.current.style.transform = `translateX(${-size * counter}px)`;
@@ -34,25 +45,25 @@ const ProductName = ({ products }) => {
 
   return (
     <section className="product-name-section">
-      <h3 className="product-subtitle">Product Name</h3>
+      <h3 className="product-subtitle">{brand}</h3>
 
       <div className="slider-container">
         <div className="slider" ref={slider}>
           {
             /* prettier-ignore */
-            products.length > 0
-          && products.map((product) => (
-            <ProductCard
-              key={product.time}
-              img={product.image}
-              name={product.product_name}
-              brand={product.brand_name}
-              price={product.price}
-              location={product.address}
-              date={product.date}
-              description={product.discription}
-            />
-          ))
+            items.length > 0
+            && items.map((product) => (
+              <ProductCard
+                key={product.time}
+                img={product.image}
+                name={product.product_name}
+                brand={product.brand_name}
+                price={product.price}
+                location={product.address}
+                date={product.date}
+                description={product.discription}
+              />
+            ))
           }
         </div>
       </div>
@@ -77,8 +88,10 @@ const ProductName = ({ products }) => {
     </section>
   );
 };
+
 ProductName.propTypes = {
   products: PropTypes.arrayOf.isRequired,
+  brand: PropTypes.string.isRequired,
 };
 
 export default ProductName;

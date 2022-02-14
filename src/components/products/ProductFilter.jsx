@@ -1,31 +1,91 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './ProductFilter.css';
 
-const ProductFilter = () => (
-  <div className="filter-container">
-    <h3 className="filter-title">Filter</h3>
+const ProductFilter = ({
+  products = [],
+  setStateFilter,
+  setProductFilter,
+  setCityFilter,
+}) => {
+  const [productName, setProductName] = useState([]);
+  const [state, setState] = useState([]);
+  const [city, setCity] = useState([]);
 
-    <select name="Products" id="product">
-      <option value="product-value">product1</option>
-      <option value="product-value">product2</option>
-      <option value="product-value">product3</option>
-      <option value="product-value">product4</option>
-    </select>
+  useEffect(() => {
+    if (products.length > 0) {
+      const productName = products.map((product) => product.brand_name);
+      const productBrandUnique = [...new Set(productName)];
+      setProductName(productBrandUnique);
+      const state = products.map((product) => product.address.state);
+      const stateUnique = [...new Set(state)];
+      setState(stateUnique);
+      const city = products.map((product) => product.address.city);
+      const cityUnique = [...new Set(city)];
+      setCity(cityUnique);
+    }
+  }, [products]);
 
-    <select name="State" id="state">
-      <option value="state-value">state1</option>
-      <option value="state-value">state2</option>
-      <option value="state-value">state3</option>
-      <option value="state-value">state4</option>
-    </select>
+  const productHandler = (e) => {
+    setProductFilter(e.target.value);
+  };
 
-    <select name="City" id="city">
-      <option value="city-value">city1</option>
-      <option value="city-value">city2</option>
-      <option value="city-value">city3</option>
-      <option value="city-value">city4</option>
-    </select>
-  </div>
-);
+  const stateHandler = (e) => {
+    setStateFilter(e.target.value);
+  };
+
+  const cityHandler = (e) => {
+    setCityFilter(e.target.value);
+  };
+
+  return (
+    <div className="filter-container">
+      <h3 className="filter-title">Filter</h3>
+
+      <select name="Products" id="product" onChange={productHandler}>
+        {
+          /* prettier-ignore */
+          productName.length > 0
+          && productName.map((product) => (
+            <option value={product} key={product}>
+              {product}
+            </option>
+          ))
+        }
+      </select>
+
+      <select name="State" id="state" onChange={stateHandler}>
+        {
+          /* prettier-ignore */
+          state.length > 0
+          && state.map((state) => (
+            <option value={state} key={state}>
+              {state}
+            </option>
+          ))
+        }
+      </select>
+
+      <select name="City" id="city" onChange={cityHandler}>
+        {
+          /* prettier-ignore */
+          city.length > 0
+          && city.map((city) => (
+            <option value={city} key={city}>
+              {city}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  );
+};
+
+ProductFilter.propTypes = {
+  products: PropTypes.arrayOf.isRequired,
+  setProductFilter: PropTypes.string.isRequired,
+  setStateFilter: PropTypes.string.isRequired,
+  setCityFilter: PropTypes.string.isRequired,
+};
 
 export default ProductFilter;

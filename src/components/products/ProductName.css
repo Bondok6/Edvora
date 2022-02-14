@@ -1,6 +1,6 @@
 .product-name-section {
   margin-bottom: 5rem;
-  margin-right: 10rem;
+  margin-right: 3rem;
 }
 
 .product-subtitle {
@@ -30,12 +30,12 @@
 }
 
 .right-icon {
-  left: 5rem;
+  left: 4rem;
   float: right;
 }
 
 .left-icon {
-  right: 4rem;
+  right: 3rem;
   transform: rotate(-180deg);
   float: left;
 }

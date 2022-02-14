@@ -24,8 +24,7 @@
 
 ## Video Demo 📽
 
-https://user-images.githubusercontent.com/45231276/153840250-93602f98-a2b9-4543-b0c3-589bc96bbc21.mp4
-
+https://user-images.githubusercontent.com/45231276/153841949-090ec5ed-96ea-413f-9f30-7ff1633ab2ff.mp4
 
 ## Getting Started
 

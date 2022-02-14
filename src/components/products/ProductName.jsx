@@ -25,7 +25,7 @@ const ProductName = ({ products = [], brand }) => {
   }, []);
 
   const nextHandler = () => {
-    if (counter === products.length - 5) return;
+    if (counter === items.length - 1) return;
     slider.current.style.transition = 'transform 0.4s ease-in-out';
     const c = counter + 1;
     slider.current.style.transform = `translateX(${-size * c}px)`;

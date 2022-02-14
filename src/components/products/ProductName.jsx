@@ -10,7 +10,7 @@ const ProductName = ({ products = [], brand }) => {
   const rightIcon = useRef();
   const leftIcon = useRef();
 
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(0);
   const size = 235;
 
   useEffect(() => {
@@ -19,10 +19,6 @@ const ProductName = ({ products = [], brand }) => {
       setItems(data);
     }
   }, [products, brand]);
-
-  useEffect(() => {
-    slider.current.style.transform = `translateX(${-size * counter}px)`;
-  }, []);
 
   const nextHandler = () => {
     if (counter === items.length - 1) return;

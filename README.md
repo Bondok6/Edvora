@@ -22,6 +22,11 @@
 
 ### [Edvora Link](https://bondok6.github.io/Edvora/)
 
+## Video Demo 📽
+
+https://user-images.githubusercontent.com/45231276/153840250-93602f98-a2b9-4543-b0c3-589bc96bbc21.mp4
+
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.

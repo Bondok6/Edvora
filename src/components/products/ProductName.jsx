@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './ProductName.css';
+import '../styles/ProductName.css';
 import ProductCard from './ProductCard';
 import rightArrow from '../imgs/right-arrow.svg';
 

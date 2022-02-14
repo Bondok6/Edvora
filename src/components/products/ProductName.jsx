@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './ProductName.css';
+import '../styles/ProductName.css';
 import ProductCard from './ProductCard';
 import rightArrow from '../imgs/right-arrow.svg';
 
@@ -10,7 +10,7 @@ const ProductName = ({ products = [], brand }) => {
   const rightIcon = useRef();
   const leftIcon = useRef();
 
-  const [counter, setCounter] = useState(1);
+  const [counter, setCounter] = useState(0);
   const size = 235;
 
   useEffect(() => {
@@ -20,12 +20,8 @@ const ProductName = ({ products = [], brand }) => {
     }
   }, [products, brand]);
 
-  useEffect(() => {
-    slider.current.style.transform = `translateX(${-size * counter}px)`;
-  }, []);
-
   const nextHandler = () => {
-    if (counter === products.length - 5) return;
+    if (counter === items.length - 1) return;
     slider.current.style.transition = 'transform 0.4s ease-in-out';
     const c = counter + 1;
     slider.current.style.transform = `translateX(${-size * c}px)`;

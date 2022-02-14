@@ -14,9 +14,10 @@ const ProductName = ({ products = [], brand }) => {
   const size = 235;
 
   useEffect(() => {
-    if (products.length) {
+    if (products.length > 0) {
       const data = products.filter((product) => {
         if (product.brand_name === brand) return product;
+        return products;
       });
       setItems(data);
     }
@@ -50,8 +51,7 @@ const ProductName = ({ products = [], brand }) => {
         <div className="slider" ref={slider}>
           {
             /* prettier-ignore */
-            items.length > 0
-          && items.map((product) => (
+            items.length > 0 && items.map((product) => (
             <ProductCard
               key={product.time}
               img={product.image}
@@ -61,8 +61,7 @@ const ProductName = ({ products = [], brand }) => {
               location={product.address}
               date={product.date}
               description={product.discription}
-            />
-          ))
+              />))
           }
         </div>
       </div>
@@ -87,6 +86,7 @@ const ProductName = ({ products = [], brand }) => {
     </section>
   );
 };
+
 ProductName.propTypes = {
   products: PropTypes.arrayOf.isRequired,
   brand: PropTypes.string.isRequired,

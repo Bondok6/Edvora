@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ProductName from './ProductName';
 import PropTypes from 'prop-types';
+import ProductName from './ProductName';
 
 const Products = ({ products = [] }) => {
   const [productName, setProductName] = useState([]);
@@ -17,7 +17,7 @@ const Products = ({ products = [] }) => {
     <>
       {products.length > 0 &&
         productName.map((brand) => {
-          return <ProductName brand={brand} products={products} />;
+          return <ProductName key={brand} brand={brand} products={products} />;
         })}
     </>
   );

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import ProductFilter from './components/products/ProductFilter';
-// import ProductName from './components/products/ProductName';
 import Products from './components/products/Products';
 
 function App() {
@@ -14,6 +13,7 @@ function App() {
     if (data.length > 0) {
       const productDataFilter = data.filter((product) => {
         if (productFilter !== '') return product.brand_name === productFilter;
+        return product;
       });
       setData(productDataFilter);
     }
@@ -23,7 +23,9 @@ function App() {
     if (data.length > 0) {
       const stateDataFilter = data.filter((product) => {
         if (stateFilter !== '') return product.address.state === stateFilter;
+        return product;
       });
+
       setData(stateDataFilter);
     }
   }, [stateFilter]);
@@ -32,6 +34,7 @@ function App() {
     if (data.length > 0) {
       const cityDataFilter = data.filter((product) => {
         if (cityFilter !== '') return product.address.city === cityFilter;
+        return product;
       });
       setData(cityDataFilter);
     }
@@ -44,6 +47,7 @@ function App() {
   };
 
   useEffect(() => getData(), []);
+
   return (
     <main>
       <section className="filter-section">

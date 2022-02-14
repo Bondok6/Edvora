@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './ProductFilter.css';
 
 const ProductFilter = ({
   products = [],
-  productFilter,
-  stateFilter,
-  cityFilter,
   setStateFilter,
   setProductFilter,
   setCityFilter,
@@ -45,23 +43,49 @@ const ProductFilter = ({
       <h3 className="filter-title">Filter</h3>
 
       <select name="Products" id="product" onChange={productHandler}>
-        {productName.length > 0 &&
-          productName.map((product) => (
-            <option value={product}>{product}</option>
-          ))}
+        {
+          /* prettier-ignore */
+          productName.length > 0
+          && productName.map((product) => (
+            <option value={product} key={product}>
+              {product}
+            </option>
+          ))
+        }
       </select>
 
       <select name="State" id="state" onChange={stateHandler}>
-        {state.length > 0 &&
-          state.map((state) => <option value={state}>{state}</option>)}
+        {
+          /* prettier-ignore */
+          state.length > 0
+          && state.map((state) => (
+            <option value={state} key={state}>
+              {state}
+            </option>
+          ))
+        }
       </select>
 
       <select name="City" id="city" onChange={cityHandler}>
-        {city.length > 0 &&
-          city.map((city) => <option value={city}>{city}</option>)}
+        {
+          /* prettier-ignore */
+          city.length > 0
+          && city.map((city) => (
+            <option value={city} key={city}>
+              {city}
+            </option>
+          ))
+        }
       </select>
     </div>
   );
+};
+
+ProductFilter.propTypes = {
+  products: PropTypes.arrayOf.isRequired,
+  setProductFilter: PropTypes.string.isRequired,
+  setStateFilter: PropTypes.string.isRequired,
+  setCityFilter: PropTypes.string.isRequired,
 };
 
 export default ProductFilter;

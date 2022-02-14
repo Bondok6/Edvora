@@ -4,13 +4,23 @@ import './ProductName.css';
 import ProductCard from './ProductCard';
 import rightArrow from '../imgs/right-arrow.svg';
 
-const ProductName = ({ products }) => {
+const ProductName = ({ products = [], brand }) => {
+  const [items, setItems] = useState([]);
   const slider = useRef();
   const rightIcon = useRef();
   const leftIcon = useRef();
 
   const [counter, setCounter] = useState(1);
   const size = 235;
+
+  useEffect(() => {
+    if (products.length) {
+      const data = products.filter((product) => {
+        if (product.brand_name === brand) return product;
+      });
+      setItems(data);
+    }
+  }, [products, brand]);
 
   useEffect(() => {
     slider.current.style.transform = `translateX(${-size * counter}px)`;
@@ -34,14 +44,14 @@ const ProductName = ({ products }) => {
 
   return (
     <section className="product-name-section">
-      <h3 className="product-subtitle">Product Name</h3>
+      <h3 className="product-subtitle">{brand}</h3>
 
       <div className="slider-container">
         <div className="slider" ref={slider}>
           {
             /* prettier-ignore */
-            products.length > 0
-          && products.map((product) => (
+            items.length > 0
+          && items.map((product) => (
             <ProductCard
               key={product.time}
               img={product.image}
@@ -79,6 +89,7 @@ const ProductName = ({ products }) => {
 };
 ProductName.propTypes = {
   products: PropTypes.arrayOf.isRequired,
+  brand: PropTypes.string.isRequired,
 };
 
 export default ProductName;

@@ -2,7 +2,9 @@
 
 > The Edvora web app is assesment project, Edvora App is a web application based on an external API [Product](https://assessment-edvora.herokuapp.com), showing data about different types of products and the user can filter these data by choosing a specific state, city or product name.
 
-<img src="" width="30%" /><img src="" width="70%" />
+<img src="https://user-images.githubusercontent.com/45231276/153813196-be7fc34b-cedd-4786-b474-c21b2e6ac762.PNG" width="30%" /><img src="https://user-images.githubusercontent.com/45231276/153813238-19e3d912-a07b-4efd-9a02-5bb1aa84e374.PNG" width="70%" />
+
+
 
 ## Built With
 

@@ -23,3 +23,14 @@ main {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+
+  .filter-section,
+  .products-section {
+    width: 100%;
+  }
+}

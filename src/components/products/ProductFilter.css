@@ -22,6 +22,13 @@ select {
   padding: 0.8rem 1.1rem 0.75rem 1.3rem;
   margin-bottom: 1rem;
   border: none;
+  outline: none;
   border-radius: 0.5rem;
   font-size: 1.7rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .filter-container {
+    width: 100%;
+  }
 }

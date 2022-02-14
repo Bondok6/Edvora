@@ -25,16 +25,23 @@
 .right-icon,
 .left-icon {
   position: relative;
-  float: right;
   top: -14rem;
   cursor: pointer;
 }
 
 .right-icon {
   left: 5rem;
+  float: right;
 }
 
 .left-icon {
-  right: 138rem;
+  right: 4rem;
   transform: rotate(-180deg);
+  float: left;
+}
+
+@media screen and (max-width: 1200px) {
+  .product-name-section {
+    margin: 2rem 5rem;
+  }
 }

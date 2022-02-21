@@ -55,6 +55,11 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
+## Acknowledgments
+
+- Inspired by [Edvora](https://www.edvora.com/)
+- The design link [Figma](https://www.figma.com/file/AsJwUrY29CeN2EnFAjSSMv/Assessment?node-id=0%3A1)
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
